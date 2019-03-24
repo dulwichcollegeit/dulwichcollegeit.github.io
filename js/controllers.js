@@ -13,15 +13,9 @@ function ($scope, $stateParams) {
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
 function ($scope, $stateParams, $ionicPopup, Form) {
 
-  $scope.form = Form.getForm();
-
-  $scope.src_function = function ($scope.form.data1, function(res)) { 
-    if (res.data1) {
-      $scope.form = res;
-      $ionicPopup.alert({title: res.data1})
-    } else {
+  
+  $scope.src_function = function ($scope.form.data1, function(res) { 
       $ionicPopup.alert({title: 'Error'});
-    }
   };
 
 
