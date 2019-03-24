@@ -8,13 +8,20 @@ function ($scope, $stateParams) {
 
 }])
    
-.controller('homeCtrl', ['$scope', '$stateParams', '$ionicPopup',  // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
+.controller('homeCtrl', ['$scope', '$stateParams', '$ionicPopup', "Form",  // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
 // You can include any angular dependencies as parameters for this function
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope, $stateParams, $ionicPopup) {
+function ($scope, $stateParams, $ionicPopup, Form) {
 
-  $scope.src_function = function () { 
-    $ionicPopup.alert({title: 'Hello'});
+  $scope.form = Form.getForm();
+
+  $scope.src_function = function ($scope.form.data1, function(res) { 
+    if (res.data1) {
+      $scope.form = res;
+      $ionicPopup.alert({title: res.data1})
+    } else {
+      $ionicPopup.alert({title: 'Error'});
+    }
   };
 
 
