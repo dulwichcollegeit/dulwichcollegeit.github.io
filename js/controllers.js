@@ -15,7 +15,7 @@ function ($scope, $stateParams, $ionicPopup, Form) {
 
   $scope.form = Form.getForm();
 
-  $scope.src_function = function ($scope.form.data1, function(res) { 
+  $scope.src_function = function ($scope.form.data1, function(res)) { 
     if (res.data1) {
       $scope.form = res;
       $ionicPopup.alert({title: res.data1})
