@@ -14,7 +14,7 @@ function ($scope, $stateParams) {
 function ($scope, $stateParams, $ionicPopup) {
 
   
-  $scope.src_function = function (function(res)) { 
+  $scope.src_function = function () { 
       $ionicPopup.alert({title: 'Error'});
 ``  };
 
