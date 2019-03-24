@@ -1,10 +1,10 @@
 <ion-view title="Home" id="page2">
-  <ion-content padding="true" class="has-header">
+  <ion-content padding="true" class="has-header" ng-show="form.field1 == undefinied">
     <h1 id="home-heading1" style="color:#000000;">My Guide App</h1>
     <div id="home-markdown2" class="show-list-numbers-and-dots">
       <p style="color:#000000;">Some description of my app</p>
     </div>
-    <ion-input value="custom"></ion-input>
+    <input type="text" value="test">
     <button  ng-click="src_function()" id="home-button1" class="button button-positive button-block">Tap me!</button>
   </ion-content>
 </ion-view>
